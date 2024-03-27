@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:30:16 by rteles-f          #+#    #+#             */
-/*   Updated: 2024/02/20 16:37:39 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/02/20 21:17:27 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <map>
 
 class Client;
+
 
 class Channel {
 	private:
@@ -34,5 +35,7 @@ class Channel {
 		void	update(void);
 
 } ;
+
+# include "Client.hpp"
 
 #endif
