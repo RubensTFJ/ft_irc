@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 21:18:54 by rteles-f          #+#    #+#             */
-/*   Updated: 2024/02/20 21:19:33 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/03/27 20:27:43 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ Channel& Channel::operator=(const Channel& tocopy) {
 	
 // 	return ()
 // }
+std::list<Client>	Channel::getChannel(int channel) {
+
+	return ()
+}
 
 // void	Channel::update(void) {
 // 	std::list<Client>::iterator	client;

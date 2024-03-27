@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 18:05:27 by rteles-f          #+#    #+#             */
-/*   Updated: 2024/03/27 20:19:13 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/03/27 20:26:22 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,24 @@
 
 #include <iostream>
 #include <string>
+// #include <ft_irc.hpp>
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <sys/socket.h>
+# include <sys/select.h>
+# include <stdlib.h>
+# include <netdb.h>
+# include <netinet/in.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <strings.h>
+# include <string.h>
+
+typedef struct protoent     t_protocol;
+typedef struct sockaddr_in  t_sock;
 
 void    end_chat(int server, int fd1, int fd2)
 {
@@ -43,7 +61,7 @@ int main(int ac, char **args)
     tcp = getprotobyname("tcp");
     server_fd = socket(AF_INET, SOCK_STREAM, tcp->p_proto);
     sock.sin_family = AF_INET;
-    sock.sin_addr.s_addr = INADDR_ANY;
+    sock.sin_addr.s_addr = INADDR_ANY;	
     sock.sin_port = htons(port);
     bind(server_fd, (struct sockaddr*)&sock, sizeof(sock));
     listen(server_fd, 0);

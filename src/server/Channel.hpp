@@ -19,10 +19,12 @@
 # include <map>
 
 class Client;
+class Server;
 
 
 class Channel {
 	private:
+		Server	*observer;
 		std::list<Client> _clients;
 
 	public:
@@ -33,6 +35,9 @@ class Channel {
 		Channel& operator=(const Channel& tocopy);
 		std::list<Client>	getChannel(int socket);
 		void	update(void);
+		void	notifyObserver() {
+			observer.
+		}
 
 } ;
 

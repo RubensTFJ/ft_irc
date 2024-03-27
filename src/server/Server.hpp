@@ -6,7 +6,7 @@
 /*   By: rteles-f <rteles-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 17:30:16 by rteles-f          #+#    #+#             */
-/*   Updated: 2024/02/20 21:13:59 by rteles-f         ###   ########.fr       */
+/*   Updated: 2024/03/27 20:27:31 by rteles-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,12 @@ class Server {
 	private:
 		bool					_online;
 		std::map<int, Channel>	_channels;
+		std::map<std::string, Channel>	_channels;
+		Channel	connections;
+		int		server_socket;
+		bool	_online;
+
 		void	updateChannels(void);
-		std::list<Client>	getChannel(int socket);
 
 	public:
 		Server();
@@ -38,8 +42,6 @@ class Server {
 		void	setup(void);
 		void	online(void);
 		void	offline(void);
-
-
 } ;
 
 #endif
